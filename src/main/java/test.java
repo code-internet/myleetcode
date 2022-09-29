@@ -144,10 +144,7 @@ public class test {
 
 
     public static void main(String[] args) {
-        int[] a = {1,2,2,3,4,1};
-        int[] b = {2,2,3,4};
-        int[] intersection = intersection(a, b);
-        System.out.println();
+        System.out.println("这是一个测试");
     }
 
     public static int[] intersection(int[] nums1, int[] nums2) {
