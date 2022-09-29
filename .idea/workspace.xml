@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fcdbd59a-3911-422c-b268-504363b788c4" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="E:\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Ck6IWh59FZtjy8NA57AjBbBQnQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "F:/github/myleetcode",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.test">
+    <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BubbleSort" />
+      <module name="myleetcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Demo9" />
+      <module name="myleetcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsertSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="InsertSort" />
+      <module name="myleetcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo" />
+      <module name="myleetcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="myleetcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.demo" />
+        <item itemvalue="Application.Demo9" />
+        <item itemvalue="Application.InsertSort" />
+        <item itemvalue="Application.BubbleSort" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\liuzhen\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fcdbd59a-3911-422c-b268-504363b788c4" name="Changes" comment="" />
+      <created>1659334227482</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659334227482</updated>
+      <workItem from="1659334229059" duration="401000" />
+      <workItem from="1659334769929" duration="6549000" />
+      <workItem from="1659433391326" duration="8000" />
+      <workItem from="1660553941963" duration="280000" />
+      <workItem from="1660554244798" duration="9914000" />
+      <workItem from="1660628215563" duration="11929000" />
+      <workItem from="1660716529220" duration="1977000" />
+      <workItem from="1660731890125" duration="8817000" />
+      <workItem from="1661139876828" duration="372000" />
+      <workItem from="1661150220553" duration="19584000" />
+      <workItem from="1661305750952" duration="48000" />
+      <workItem from="1661392820813" duration="8782000" />
+      <workItem from="1661755873876" duration="9543000" />
+      <workItem from="1661824611434" duration="13834000" />
+      <workItem from="1661914367414" duration="2430000" />
+      <workItem from="1661999222687" duration="30000" />
+      <workItem from="1662704960004" duration="3745000" />
+      <workItem from="1663031667922" duration="3245000" />
+      <workItem from="1663136596087" duration="13803000" />
+      <workItem from="1663293849384" duration="5309000" />
+      <workItem from="1663308452797" duration="8517000" />
+      <workItem from="1663551160053" duration="7733000" />
+      <workItem from="1663570722414" duration="595000" />
+      <workItem from="1663724689521" duration="10648000" />
+      <workItem from="1663752455458" duration="1708000" />
+      <workItem from="1663809343128" duration="2990000" />
+      <workItem from="1664161410906" duration="695000" />
+      <workItem from="1664328155838" duration="9546000" />
+      <workItem from="1664355432452" duration="7913000" />
+    </task>
+    <task id="LOCAL-00001" summary="myleetcode代码提交">
+      <created>1664415617282</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664415617282</updated>
+    </task>
+    <task id="LOCAL-00002" summary="myleetcode代码提交">
+      <created>1664415709853</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664415709853</updated>
+    </task>
+    <task id="LOCAL-00003" summary="myleetcode代码提交dsd">
+      <created>1664415908327</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664415908327</updated>
+    </task>
+    <task id="LOCAL-00004" summary="myleetcode代码提交dsddd">
+      <created>1664416692612</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664416692612</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="myleetcode代码提交" />
+    <MESSAGE value="myleetcode代码提交dsd" />
+    <MESSAGE value="myleetcode代码提交dsddd" />
+    <option name="LAST_COMMIT_MESSAGE" value="myleetcode代码提交dsddd" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
