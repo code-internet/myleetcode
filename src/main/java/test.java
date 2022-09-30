@@ -261,10 +261,45 @@ public class test {
         return arrayList;
     }
 
+
+    public static ListNode removeElements(ListNode head, int val) {
+        if(head==null){
+            return head;
+        }
+        if(head.next==null&&head.val!=val){
+            return head;
+        }
+        ListNode listNode = new ListNode(-1);
+        ListNode listNode1 = listNode;
+        while (head.next!=null){
+            if(head.val != val){
+                ListNode node = new ListNode(head.val);
+                listNode.next = node;
+                listNode = listNode.next;
+            }
+            head=head.next;
+        }
+        return listNode1.next;
+    }
+
+    public static ListNode swapPairs(ListNode head) {
+        if(head==null||head.next==null){
+            return head;
+        }
+        ListNode listNode = head;
+        while (listNode!=null&&listNode.next!=null){
+            int temp = listNode.val;
+            listNode.val = listNode.next.val;
+            listNode.next.val = temp;
+            listNode = listNode.next.next;
+        }
+        return head;
+    }
     public static void main(String[] args) {
-        int[] arr = {3,0,-2,-1,1,2};
-        List<List<Integer>> b = threeSum(arr);
-        System.out.println(b);
+        int[] arr = {1,2,3};
+        ListNode linkedList = ListNode.createLinkedList(arr);
+        ListNode listNode = swapPairs(linkedList);
+        ListNode.printLinkedList(listNode);
     }
 
 

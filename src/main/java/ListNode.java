@@ -20,7 +20,9 @@ public class ListNode {
         if (arr.length == 0) {
             return null;
         }
+        //创建一个头结点
         ListNode head = new ListNode(arr[0]);
+        //定义一个变量，指向头结点。后续都是指针变量移动。
         ListNode current = head;
         for (int i = 1; i < arr.length; i++) {
             ListNode node = new ListNode(arr[i]);
