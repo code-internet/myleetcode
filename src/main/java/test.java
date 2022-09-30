@@ -1,4 +1,4 @@
-import com.sun.jmx.remote.internal.ArrayQueue;
+import com.sun.deploy.util.ArrayUtil;
 
 import javax.sound.midi.Soundbank;
 import java.util.*;
@@ -141,12 +141,6 @@ public class test {
         }
         return -1;
     }
-
-
-    public static void main(String[] args) {
-        System.out.println("这是一个测试");
-    }
-
     public static int[] intersection(int[] nums1, int[] nums2) {
         HashMap<Integer,Integer> hashMap = new HashMap();
         HashMap<Integer,Integer> hashMap1 = new HashMap();
@@ -199,5 +193,80 @@ public class test {
         }
         return size;
     }
+
+    public static int strStr(String haystack,String needle){
+        return -1;
+    }
+
+    private static int getNextNumber(int n) {
+        int res = 0;
+        while (n > 0) {
+            int temp = n % 10;
+            res += temp * temp;
+            n = n / 10;
+        }
+        return res;
+    }
+
+    public static boolean canConstruct(String ransomNote, String magazine) {
+        if(magazine==null||ransomNote==null){
+            return false;
+        }
+        HashMap<Character,Integer> map = new HashMap();
+        char[] chars = magazine.toCharArray();
+        for(int i = 0 ;i<chars.length;i++){
+            char temp = chars[i];
+            map.put(temp,map.containsKey(temp)?map.get(temp)+1:1);
+        }
+        int count = 0;
+        char[] charR = ransomNote.toCharArray();
+        for(int j=0 ;j<charR.length;j++){
+            if(map.containsKey(charR[j])){
+                map.put(charR[j],map.get(charR[j])-1);
+                if(map.get(charR[j])>=0){
+                    count++;
+                }
+            }
+        }
+        return count==charR.length;
+    }
+
+
+    public static List<List<Integer>> threeSum(int[] nums) {
+        Arrays.sort(nums);
+        ArrayList arrayList = new ArrayList();
+        for(int i = 0 ;i<nums.length;i++){
+            int temp = nums[i];
+            int head = i+1;
+            int tail = nums.length-1;
+            while (head<tail){
+                if(nums[head]+nums[tail]==-temp){
+                    ArrayList arrayList1 = new ArrayList();
+                    arrayList1.add(nums[head]);
+                    arrayList1.add(nums[tail]);
+                    arrayList1.add(temp);
+                    arrayList.add(arrayList1);
+                    head++;
+                    tail--;
+                }else if(nums[head]+nums[tail]+temp>0){
+                    tail--;
+                }else if(nums[head]+nums[tail]+temp<0){
+                    head++;
+                }
+            }
+        }
+        HashSet set = new HashSet(arrayList);
+        arrayList.clear();
+        arrayList.addAll(set);
+        return arrayList;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {3,0,-2,-1,1,2};
+        List<List<Integer>> b = threeSum(arr);
+        System.out.println(b);
+    }
+
+
 
 }
