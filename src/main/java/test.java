@@ -296,10 +296,28 @@ public class test {
         return head;
     }
     public static void main(String[] args) {
-        int[] arr = {1,2,3};
-        ListNode linkedList = ListNode.createLinkedList(arr);
-        ListNode listNode = swapPairs(linkedList);
-        ListNode.printLinkedList(listNode);
+        Integer[] ss={3,9,20,0,0,15,7};
+        TreeNode node = TreeNode.constructTree(ss);
+        TreeNode.preOrder(node);
+        int i = maxDepth(node);
+        System.out.println();
+        System.out.println(i);
+    }
+
+    public static int maxDepth(TreeNode root) {
+        if(root == null){
+            return 0;
+        }
+        int depth = getDepth(root);
+        return depth;
+    }
+    public static int getDepth(TreeNode root){
+        if(root==null){
+            return 0;
+        }
+        int i = getDepth(root.left);
+        int k = getDepth(root.right);
+        return Math.max(i,k)+1;
     }
 
 
