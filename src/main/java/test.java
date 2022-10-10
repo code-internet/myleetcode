@@ -296,12 +296,10 @@ public class test {
         return head;
     }
     public static void main(String[] args) {
-        Integer[] ss={3,9,20,0,0,15,7};
-        TreeNode node = TreeNode.constructTree(ss);
-        TreeNode.preOrder(node);
-        int i = maxDepth(node);
-        System.out.println();
-        System.out.println(i);
+        String str2 = "SEUCalvin";
+        String str1 = new String("SEU")+ new String("Calvin");
+        System.out.println(str1.intern() == str2);
+        System.out.println(str1 == "SEUCalvin");
     }
 
     public static int maxDepth(TreeNode root) {
