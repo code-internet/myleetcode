@@ -1,4 +1,5 @@
 import java.lang.reflect.WildcardType;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -12,49 +13,14 @@ import java.util.List;
 public class ListNode_test1 {
 
         public static void main(String[] args) {
-
-            int[] arr = {4, 5, 1, 9,0,6,7};
-            ListNode linkedList = ListNode.createLinkedList(arr);
-            ListNode listNode = getKthFromEnd(linkedList, 5);
-            ListNode.printLinkedList(listNode);
+            boolean h3 = squareIsWhite("a2");
+            System.out.println(h3);
         }
 
-        public static ListNode deleteNode(ListNode head, int val) {
-            if(head==null){
-                return head;
-            }
-            ListNode temp = head;
-            ListNode listNode = new ListNode(-1);
-            ListNode current = listNode;
-            while (temp!=null){
-                if(temp.val!=val) {
-                    current.next = new ListNode(temp.val);
-                    current = current.next;
-                }
-                temp = temp.next;
-            }
-            return listNode.next;
-
-        }
-
-    public static ListNode getKthFromEnd(ListNode head, int k) {
-        if(head==null){
-            return head;
-        }
-        int count = 0;
-        ListNode listNode = head;
-        while (listNode!=null){
-            count++;
-            listNode = listNode.next;
-        }
-        ListNode temp = head;
-        int p = 0;
-        int q = count-k;
-        while ( p!=q){
-            p++;
-            temp = temp.next;
-        }
-        return temp;
+    public static boolean squareIsWhite(String coordinates) {
+        char[] chars = coordinates.toCharArray();
+        System.out.println(chars[0]+chars[1]);
+        return (chars[0] + chars[1]) % 2 == 1;
     }
 
 }

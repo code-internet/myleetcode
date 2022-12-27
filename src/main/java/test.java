@@ -295,12 +295,82 @@ public class test {
         }
         return head;
     }
-    public static void main(String[] args) {
-        String str2 = "SEUCalvin";
-        String str1 = new String("SEU")+ new String("Calvin");
-        System.out.println(str1.intern() == str2);
-        System.out.println(str1 == "SEUCalvin");
+  
+
+
+    public static void preOrderTraverse(TreeNode root) {
+        LinkedList<TreeNode> stack = new LinkedList<>();
+        TreeNode pNode = root;
+        while (pNode != null || !stack.isEmpty()) {
+            if (pNode != null) {
+                stack.push(pNode);
+                System.out.print(pNode.val+" ");
+                pNode = pNode.left;
+            } else  {
+                TreeNode node = stack.pop();
+                pNode = node.right;
+
+            }
+        }
     }
+
+
+    public static void midOrderTraverse(TreeNode root) {
+        LinkedList<TreeNode> stack = new LinkedList<>();
+        TreeNode pNode = root;
+        while (pNode != null || !stack.isEmpty()) {
+            if (pNode != null) {
+                stack.push(pNode);
+                pNode = pNode.left;
+            } else  {
+                TreeNode node = stack.pop();
+                pNode = node.right;
+                System.out.print(node.val+" ");
+            }
+        }
+    }
+
+    /**
+     * 非递归后序遍历
+     * 后续遍历和先序、中序遍历不太一样。
+     *
+     * 后序遍历在决定是否可以输出当前节点的值的时候，需要考虑其左右子树是否都已经遍历完成。
+     *
+     * 所以需要设置一个lastVisit游标。
+     *
+     * 若lastVisit等于当前考查节点的右子树，表示该节点的左右子树都已经遍历完成，则可以输出当前节点。
+     *
+     * 并把lastVisit节点设置成当前节点，将当前游标节点node设置为空，下一轮就可以访问栈顶元素。
+     *
+     * 否者，需要接着考虑右子树，node = node.right。
+     *
+     * @param root
+     */
+    public static void aftOrderTraverse(TreeNode root) {
+        Stack<TreeNode> treeNodeStack = new Stack<TreeNode>();
+        TreeNode node = root;
+        TreeNode lastVisit = root;
+        while (node != null || !treeNodeStack.isEmpty()) {
+            while (node != null) {
+                treeNodeStack.push(node);
+                node = node.left;
+            }
+            //查看当前栈顶元素
+            node = treeNodeStack.peek();
+            //如果其右子树也为空，或者右子树已经访问
+            //则可以直接输出当前节点的值
+            if (node.right == null || node.right == lastVisit) {
+                System.out.print(node.val + " ");
+                treeNodeStack.pop();
+                lastVisit = node;
+                node = null;
+            } else {
+                //否则，继续遍历右子树
+                node = node.right;
+            }
+        }
+    }
+
 
     public static int maxDepth(TreeNode root) {
         if(root == null){
@@ -317,7 +387,60 @@ public class test {
         int k = getDepth(root.right);
         return Math.max(i,k)+1;
     }
+    public static int minOperations(int[] nums) {
+        int count = 0;
+        if(nums.length == 1){
+            return count;
+        }
+        for(int i = 0; i<nums.length-1;i++){
+            while (nums[i]>=nums[i+1]){
+                nums[i+1] = nums[i+1]+1;
+                count+=1;
+            }
+        }
+        return count;
+    }
 
+    public static int beautySum(String s) {
+        int res = 0;
+        for (int i = 0; i < s.length(); i++) {
+            int[] cnt = new int[26];
+            int maxFreq = 0;
+            for (int j = i; j < s.length(); j++) {
+                cnt[s.charAt(j) - 'a']++;
+                maxFreq = Math.max(maxFreq, cnt[s.charAt(j) - 'a']);
+                int minFreq = s.length();
+                for (int k = 0; k < 26; k++) {
+                    if (cnt[k] > 0) {
+                        minFreq = Math.min(minFreq, cnt[k]);
+                    }
+                }
+                res += maxFreq - minFreq;
+            }
+        }
+        return res;
+    }
+
+
+    public static void main(String[] args) {
+        String  nums = "aabcb";
+        checkIfPangram(nums);
+    }
+
+    public static boolean checkIfPangram(String sentence) {
+        if(sentence.length()<26){
+            return false;
+        }
+        HashMap<Character,Integer> map = new HashMap();
+        for(int i = 0;i<sentence.length();i++){
+            int j =  map.get(sentence.charAt(i))==null?0:(Integer)map.get(sentence.charAt(i));
+            map.put(sentence.charAt(i),j+1);
+        }
+        if(map.size()==26){
+            return true;
+        }
+        return false;
+    }
 
 
 }

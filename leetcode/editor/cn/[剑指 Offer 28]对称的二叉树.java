@@ -42,7 +42,28 @@
  */
 class Solution {
     public boolean isSymmetric(TreeNode root) {
+        if(root==null){
+            return true;
+        }
+        return  compare(root.left,root.right);
+    }
 
+    public boolean compare(TreeNode left,TreeNode right){
+        if(left==null && right==null){
+            return true;
+        }
+        if(left!=null && right==null){
+            return false;
+        }
+        if(left==null && right!=null){
+            return false;
+        }
+        if(left.val != right.val){
+            return false;
+        }
+        boolean flag = compare(left.left,right.right);
+        boolean flag1 = compare(left.right,right.left);
+        return flag && flag1;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
