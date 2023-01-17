@@ -1,4 +1,6 @@
-import java.util.HashMap;
+import com.sun.org.apache.regexp.internal.RE;
+
+import java.util.*;
 import java.util.regex.Pattern;
 
 /**
@@ -13,36 +15,30 @@ public class test {
 
 
     public static void main(String[] args) {
-        String s = "abccbaacz";
-        char b = repeatedCharacter1(s);
-        System.out.println(b);
-
+       int[] nums = {13,10,35,24,76};
+        int i = countNicePairs(nums);
+        System.out.println(i);
     }
 
-    public static char repeatedCharacter(String s) {
-        HashMap<Character,Integer> map = new HashMap();
-        for(int i = 0 ;i<s.length();i++){
-            map.put(s.charAt(i),map.getOrDefault(s.charAt(i),0)+1);
-            if(map.get(s.charAt(i))>=2){
-                return s.charAt(i);
-            }
+    public static int countNicePairs(int[] nums) {
+        int mod = (int)1e9 + 7;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int sum = 0;
+        for(int i=0;i<nums.length;i++){
+            int number = nums[i];
+            sum=(sum+map.getOrDefault(number-rev(number),0))%mod;
+            map.put(number-rev(number),map.getOrDefault(number-rev(number),0)+1);
         }
-        return ' ';
+        return sum;
     }
-    public static char repeatedCharacter1(String s) {
-        int[] a = new int[26];
-        for(int i = 0 ;i<s.length();i++){
-            if(a[s.charAt(i)-'a']==1){
-                return s.charAt(i);
-            }
-            a[s.charAt(i)-'a'] = 1;
+    public static int rev(int x){
+        int sum = 0;
+        while (x!=0){
+            int a=x%10;
+            sum=sum*10+a;
+            x=x/10;
         }
-        return ' ';
+        return sum;
     }
-
-
-
-
-
 
 }
