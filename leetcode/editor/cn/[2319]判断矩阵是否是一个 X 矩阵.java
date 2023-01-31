@@ -55,10 +55,6 @@ class Solution {
                 if (j == grid.length - i -1){
                     sum1 += grid[i][j];
                 }
-            }
-        }
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid[i].length; j++) {
                 sum+=grid[i][j];
             }
         }
