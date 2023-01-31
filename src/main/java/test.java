@@ -15,30 +15,41 @@ public class test {
 
 
     public static void main(String[] args) {
-       int[] nums = {13,10,35,24,76};
-        int i = countNicePairs(nums);
+        int[][] grid = {{2,0,0,0,1},{0,4,0,1,5},{0,0,5,0,0},{0,5,0,2,0},{4,0,0,0,2}};
+        boolean i = checkXMatrix(grid);
         System.out.println(i);
     }
 
-    public static int countNicePairs(int[] nums) {
-        int mod = (int)1e9 + 7;
-        HashMap<Integer, Integer> map = new HashMap<>();
+    public static boolean checkXMatrix(int[][] grid) {
         int sum = 0;
-        for(int i=0;i<nums.length;i++){
-            int number = nums[i];
-            sum=(sum+map.getOrDefault(number-rev(number),0))%mod;
-            map.put(number-rev(number),map.getOrDefault(number-rev(number),0)+1);
+        int sum1 = 0;
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if ((i == j && grid[i][j] == 0)||(j == grid.length - i -1 && grid[i][j] ==0)){
+                    return false;
+                }
+                if (i == j){
+                    sum1 += grid[i][j];
+                }
+                if (j == grid.length - i -1){
+                    sum1 += grid[i][j];
+                }
+            }
         }
-        return sum;
-    }
-    public static int rev(int x){
-        int sum = 0;
-        while (x!=0){
-            int a=x%10;
-            sum=sum*10+a;
-            x=x/10;
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
+                sum+=grid[i][j];
+            }
         }
-        return sum;
+        if(grid.length%2!=0){
+            sum1 = sum1-grid[(grid.length-1)/2][(grid.length-1)/2];
+        }
+        System.out.println(sum);
+        System.out.println(sum1);
+        if(sum!=sum1){
+            return false;
+        }
+        return true;
     }
 
 }
