@@ -41,22 +41,24 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int[] searchRange(int[] nums, int target) {
-        int left = 0;
-        int right = nums.length-1;
-        int i = 0;
-        int[] arr = new int[2];
+        int a = binarySearch(nums,target)-1;
+        int b = binarySearch(nums,target-1);
+        if(a<b) return new int[]{-1,-1};
+        else return new int[]{b, a};
+
+    }
+
+    public int binarySearch(int[] arr, int tar){
+        int left = 0 ;int right = arr.length-1;
         while (left<=right){
             int mid = left+(right-left)/2;
-            if(nums[mid]>target){
-                right = mid-1;
-            }else if(nums[mid]<target){
-                left = mid+1;
-            }else if(nums[mid]==target){
-                arr[i++] = mid;
+            if(arr[mid]<=tar){
+                left = mid +1;
+            }else {
+                right = mid -1;
             }
         }
-        return arr;
-
+        return left;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
