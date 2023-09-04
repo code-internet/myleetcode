@@ -69,7 +69,7 @@ public class MergeSort {
         }
     }
 
-    // for test
+    // for Maintest
     public static int[] generateRandomArray(int maxSize, int maxValue) {
         int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
         for (int i = 0; i < arr.length; i++) {
@@ -78,7 +78,7 @@ public class MergeSort {
         return arr;
     }
 
-    // for test
+    // for Maintest
     public static int[] copyArray(int[] arr) {
         if (arr == null) {
             return null;
@@ -90,7 +90,7 @@ public class MergeSort {
         return res;
     }
 
-    // for test
+    // for Maintest
     public static boolean isEqual(int[] arr1, int[] arr2) {
         if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)) {
             return false;
@@ -109,7 +109,7 @@ public class MergeSort {
         return true;
     }
 
-    // for test
+    // for Maintest
     public static void printArray(int[] arr) {
         if (arr == null) {
             return;
@@ -120,7 +120,7 @@ public class MergeSort {
         System.out.println();
     }
 
-    // for test
+    // for Maintest
     public static void main(String[] args) {
         int testTime = 500000;
         int maxSize = 100;

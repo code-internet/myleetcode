@@ -44,7 +44,19 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int[] sortedSquares(int[] nums) {
-
+        int i = 0 ; int k = nums.length-1;
+        int[] ints = new int[nums.length];
+        int j = nums.length-1;
+        while (i<=k){
+            if(nums[i]*nums[i] < nums[k]*nums[k]){
+                ints[j--] = nums[k]*nums[k];
+                k--;
+            }else {
+                ints[j--] = nums[i]*nums[i];
+                i++;
+            }
+        }
+        return ints;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
