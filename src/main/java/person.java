@@ -1,4 +1,6 @@
-public class person {
+import java.util.*;
+
+public class person implements Comparable<person>{
 
     String name;
     int age;
@@ -23,12 +25,15 @@ public class person {
         System.out.println("普通方法...");
     }
 
+    @Override
+    public int compareTo(person o) {
+        int flag = this.name.compareTo(o.name);
+        return 0;
+    }
 }
 
 class demo {
     public static void main(String[] args) {
-        person b2 = new person("小明", 10, "男");
-        person b = new person();
-        b2.run();
+
     }
 }
